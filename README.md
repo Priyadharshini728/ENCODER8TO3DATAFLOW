@@ -1,5 +1,5 @@
-### ENCODER 8TO3 DATAFLOW Modelling
-
+## EXP-05 ENCODER 8TO3 DATAFLOW MODELLING
+## DATE:26-10-2024
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
@@ -7,7 +7,6 @@ To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating 
 **SOFTWARE REQUIRED:** Quartus prime
 
 **THEORY**
-
 **Encoder 8 To 3**
 
 The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2. In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. Below are the block diagram and the truth table of the 8 to 3 line encoder.
@@ -36,21 +35,41 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram
 
 **PROGRAM**
-
+~~~
+module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
+endmodule
+~~~
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+## Developed by:PRIYADHARSHINI P
+## RegisterNumber:24901256
 */
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2024-12-28 183710](https://github.com/user-attachments/assets/40c4fbd0-f2a0-4a06-9fa8-b980a7c47609)
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2024-12-28 184327](https://github.com/user-attachments/assets/d56770dd-8afd-41e8-b559-25933900146d)
+
 
 **RESULTS**
-
+sucessfully implemented Encoder 8 To 3 in Dataflow Modelling using verilog and validated their functionality using their functional tables
 
 
 
